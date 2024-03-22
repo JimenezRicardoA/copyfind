@@ -39,9 +39,26 @@ fun LoginView() {
                 .padding(bottom = 30.dp),
             shape = RoundedCornerShape(10.dp)
         )
-        Button(onClick = { /*TODO*/ }) {
+
+
+        TextField(
+            value = password,
+            placeholder = {
+                Text("contraseña")
+            },
+            onValueChange = { username = it },
+            textStyle = TextStyle(color = Color.Black),
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(bottom = 30.dp),
+            shape = RoundedCornerShape(10.dp)
+        )
+
+        Button(onClick = { /*TODO*/ }, modifier = Modifier
+            .fillMaxWidth()) {
             Text(text = "Enviar")
         }
+
     }
 
 }
